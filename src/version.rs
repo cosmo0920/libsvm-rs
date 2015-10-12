@@ -10,6 +10,6 @@ pub fn version() -> ::libc::c_int {
 #[test]
 fn test_version() {
     println!("libsvm version: {}", version());
-    // 3.12 will be printed "312"
+    // 3.12 will be printed "312".
     assert!(version() >= 312);
 }
