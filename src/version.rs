@@ -4,7 +4,9 @@ use ffi;
 
 /// Returns the libsvm version as an integer
 pub fn version() -> ::libc::c_int {
-    ffi::version()
+    unsafe {
+        return ffi::svm::libsvm_version;
+    }
 }
 
 #[test]
